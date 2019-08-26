@@ -1,18 +1,22 @@
-.App .title {
+.ContactUsPage {
+  padding: 80px 15px 30px 15px;
+}
+
+.ContactUsPage .title {
   font-weight: 700;
   font-size: 32px;
 }
 
-.App .title span {
+.ContactUsPage .title span {
   color: skyblue;
   font-weight: 900;
 }
 
-.App p {
+.ContactUsPage p {
     font-size: 14.5px;
     color: rgba(0, 0, 0, 0.4);
 }
 
-.App h5 {
+.ContactUsPage h5 {
     color: rgba(0, 0, 0, 0.6);
 }

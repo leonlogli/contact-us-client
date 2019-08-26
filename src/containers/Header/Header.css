@@ -1,0 +1,44 @@
+.Header {
+  color: white;
+}
+
+.Header .navbar {
+  font-weight: 400;
+  background-color: teal;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.Header .navbar-light .navbar-brand {
+  color: skyblue;
+  font-weight: 700;
+  position: relative;
+  bottom: 2px;
+}
+
+@media (max-width: 767px) {
+  .Header .navbar {
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+}
+
+.Header .nav-link,
+.Header .navbar-toggler {
+  color: inherit !important;
+}
+
+.Header .navbar-toggler {
+  border: 0;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.Header .navbar-toggler:hover {
+  background: darken(teal, 2);
+}
+
+.Header .nav-link:hover,
+.Header .nav-link:focus,
+.Header .nav-link:active {
+  color: whitesmoke !important;
+}

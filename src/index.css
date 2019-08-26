@@ -1,0 +1,58 @@
+/* Sticky footer (Attach a footer to the bottom of the viewport when page content is short) */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+html,
+body,
+#root {
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+body,
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+#root,
+#root .main-container {
+  flex: 1 0 auto;
+}
+
+/* clear cross button on input (IE and Edge) */
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* Change the input autofill colors in webkit browsers */
+
+@-webkit-keyframes autofill {
+  to {
+    color: inherit;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
