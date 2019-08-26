@@ -1,0 +1,18 @@
+.App .title {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.App .title span {
+  color: skyblue;
+  font-weight: 900;
+}
+
+.App p {
+    font-size: 14.5px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.App h5 {
+    color: rgba(0, 0, 0, 0.6);
+}
