@@ -1,0 +1,51 @@
+.ContactUSForm > div > .MuiTextField-root {
+  width: 48%;
+}
+
+@media (max-width: 767px) {
+  .ContactUSForm > div > .MuiTextField-root {
+    width: 47%;
+  }
+}
+
+.ContactUSForm textarea {
+  min-height: 80px;
+}
+
+.ContactUSForm .email-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  display: inline-flex;
+  background: #323262;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+  transform: rotate(-0.1turn);
+}
+
+.ContactUSForm .submit-button {
+  background: #FAE912;
+  color: #323262 !important;
+  font-weight: 500;
+  border-radius: 80%;
+  border-radius: 17px;
+  padding: 5px 7px 5px 16px;
+  font-size: 14.5px;
+}
+
+.ContactUSForm .submit-button:focus {
+  box-shadow: 0 0 0 2px #c1c118;
+}
+
+.ContactUSForm .MuiFormLabel-root.Mui-focused:not(.Mui-error) {
+  color: skyblue;
+}
+
+.ContactUSForm .MuiOutlinedInput-root.Mui-focused:not(.Mui-error) fieldset {
+  border-color: skyblue;
+}
+
+.ContactUSForm .MuiInput-underline:not(.Mui-error):after {
+  border-bottom-color: skyblue !important;
+}

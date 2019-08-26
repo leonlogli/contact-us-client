@@ -1,0 +1,7 @@
+.TermsCheckBox * {
+  font-size: 9.5px;
+}
+
+.TermsCheckBox .MuiCheckbox-root.Mui-checked {
+  color: skyblue;
+}
