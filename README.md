@@ -1,3 +1,7 @@
+ContactUS app based on React JS, Redux, Bootstrap, axios to send and retrieve messages from remote server.
+See the live demo here [live demo here](https://engice-contactus-client.herokuapp.com/).
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

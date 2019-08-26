@@ -1,0 +1,7 @@
+.MessagesPage {
+  padding: 70px 15px 30px 15px;
+}
+
+.MessagesPage .MessageCard, .MessagesPage h3 {
+  margin: 16px;
+}
