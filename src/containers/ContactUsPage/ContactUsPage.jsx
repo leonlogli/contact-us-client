@@ -1,5 +1,5 @@
 import React from "react";
-import ContactUSForm from "../../components/ContactUSForm";
+import ContactUsForm from "../../components/ContactUsForm";
 import { connect } from "react-redux";
 import { Button, Snackbar } from "@material-ui/core";
 import { saveMessage } from "../../actions/messagesActions";
@@ -42,7 +42,7 @@ function ContactUsPage({ saveMessage, status }) {
       </div>
       <div className="row justify-content-center mt-3">
         <div className="col-md-6 col-lg-4">
-          <ContactUSForm onSubmit={handleSubmit} />
+          <ContactUsForm onSubmit={handleSubmit} />
         </div>
       </div>
       <div className="row justify-content-center">
@@ -55,10 +55,11 @@ function ContactUsPage({ saveMessage, status }) {
           <Snackbar
             open={openSnackBar}
             onClose={handleCloseSnackBar}
+            autoHideDuration={1800}
             ContentProps={{ "aria-describedby": "savedSuccessMessageId" }}
             message={
               <span id="savedSuccessMessageId">
-                Your message has been sent successfully
+                Message sent successfully
               </span>
             }
             action={

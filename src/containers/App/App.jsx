@@ -1,14 +1,14 @@
 import React from "react";
 import {
   BrowserRouter as Router,
+  Redirect,
   Route,
-  Switch,
-  Redirect
+  Switch
 } from "react-router-dom";
-import Header from "../Header";
 import ContactUsPAge from "../ContactUsPage";
-import MessagesPage from "../MessagesPage";
 import Footer from "../Footer";
+import Header from "../Header";
+import MessagesPage from "../MessagesPage";
 import Page404 from "../Page404";
 
 const App = () => {
