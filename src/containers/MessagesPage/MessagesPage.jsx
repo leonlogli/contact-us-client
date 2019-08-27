@@ -1,22 +1,22 @@
 import React from "react";
 import { connect } from "react-redux";
-import MessageCard from "../../components/MessageCard/MessageCard";
+import MessageCard from "../../components/MessageCard";
+import { ERROR } from "../../constants";
 import "./MessagesPage.css";
-import { ERROR, PENDING } from "../../constants";
-import LinearProgress from "@material-ui/core/LinearProgress";
 
-function MessagesPage({ saveMessage, getMessages, messages, status }) {
+function MessagesPage({ messages, status }) {
   return (
     <div className="MessagesPage container">
-      <div className="row justify-content-center">
-        <div className="col-md-8 col-lg-6">
-          <h3>Messages</h3>
-          {status.getMessages === PENDING && <LinearProgress />}
-          {messages &&
-            Object.entries(messages).map(([index, message]) => (
-              <MessageCard {...message} key={index} />
-            ))}
-          {messages && <p>You have no message yet</p>}
+      <div className="row">
+        <div className="col">
+          <h3 className="text-center">Messages</h3>
+          <div className="d-flex flex-wrap justify-content-center py-3">
+            {messages &&
+              Object.entries(messages).map(([index, message]) => (
+                <MessageCard {...message} key={index} />
+              ))}
+            {messages.length === 0 && <p>You have no message yet</p>}
+          </div>
         </div>
       </div>
       <div className="row justify-content-center">
