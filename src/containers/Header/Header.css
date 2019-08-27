@@ -42,3 +42,15 @@
 .Header .nav-link:active {
   color: whitesmoke !important;
 }
+
+.Header .LinearProgress {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+.Header .LinearProgress > div {
+  background-color: skyblue;
+}
