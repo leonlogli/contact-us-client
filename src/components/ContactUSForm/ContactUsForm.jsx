@@ -1,11 +1,11 @@
 import { TextField } from "@material-ui/core";
 import PropTypes from "prop-types";
 import React from "react";
-import SelectBox from "../SelectBox/";
+import SelectBox from "../SelectBox";
 import TermsCheckBox from "../TermsCheckBox/TermsCheckBox";
-import "./ContactUSForm.css";
+import "./ContactUsForm.css";
 
-const ContactUSForm = props => {
+const ContactUsForm = props => {
   const {
     office = "Offices - Lausanne",
     firstName = "",
@@ -103,7 +103,7 @@ const ContactUSForm = props => {
   };
 
   return (
-    <form className="ContactUSForm d-flex flex-column" onSubmit={handleSubmit}>
+    <form className="ContactUsForm d-flex flex-column" onSubmit={handleSubmit}>
       <div className="d-flex justify-content-center">
         <SelectBox options={options} onChange={handleChange("office")} />
       </div>
@@ -172,8 +172,8 @@ const ContactUSForm = props => {
   );
 };
 
-ContactUSForm.propTypes = {
+ContactUsForm.propTypes = {
   onSubmit: PropTypes.func.isRequired
 };
 
-export default ContactUSForm;
+export default ContactUsForm;

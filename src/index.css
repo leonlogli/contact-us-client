@@ -27,6 +27,19 @@ body,
   flex: 1 0 auto;
 }
 
+/* To remove all dotted outline around elements */
+
+*,
+*:active,
+*:focus,
+*.focus,
+*.focus:active,
+*.active:focus,
+*:active:focus,
+*.active.focus {
+  outline: none !important;
+}
+
 /* clear cross button on input (IE and Edge) */
 
 input::-ms-clear,
@@ -45,14 +58,9 @@ input::-webkit-search-results-decoration {
 
 /* Change the input autofill colors in webkit browsers */
 
-@-webkit-keyframes autofill {
-  to {
-    color: inherit;
-    background: transparent;
-  }
-}
-
-input:-webkit-autofill {
-  -webkit-animation-name: autofill;
-  -webkit-animation-fill-mode: both;
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }

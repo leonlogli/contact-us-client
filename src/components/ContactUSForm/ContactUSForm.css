@@ -1,18 +1,28 @@
-.ContactUSForm > div > .MuiTextField-root {
+.ContactUsForm > div > .MuiTextField-root {
   width: 48%;
 }
 
 @media (max-width: 767px) {
-  .ContactUSForm > div > .MuiTextField-root {
+  .ContactUsForm > div > .MuiTextField-root {
     width: 47%;
   }
 }
 
-.ContactUSForm textarea {
+@media (max-width: 576px) {
+  .ContactUsForm > div > .MuiTextField-root {
+    width: 100%;
+  }
+
+  .ContactUsForm > div:not(:first-child)  {
+    flex-direction: column;
+  }
+}
+
+.ContactUsForm textarea {
   min-height: 80px;
 }
 
-.ContactUSForm .email-icon {
+.ContactUsForm .email-icon {
   width: 20px;
   height: 20px;
   border-radius: 15px;
@@ -22,9 +32,10 @@
   align-items: center;
   margin-left: 12px;
   transform: rotate(-0.1turn);
+  transition: all 0.4s;
 }
 
-.ContactUSForm .submit-button {
+.ContactUsForm .submit-button {
   background: #FAE912;
   color: #323262 !important;
   font-weight: 500;
@@ -34,18 +45,26 @@
   font-size: 14.5px;
 }
 
-.ContactUSForm .submit-button:focus {
+.ContactUsForm .submit-button:not(:disabled):hover .email-icon {
+  transform: rotate(0);
+}
+
+.ContactUsForm .submit-button:hover {
+  background: yellow;
+}
+
+.ContactUsForm .submit-button:focus {
   box-shadow: 0 0 0 2px #c1c118;
 }
 
-.ContactUSForm .MuiFormLabel-root.Mui-focused:not(.Mui-error) {
+.ContactUsForm .MuiFormLabel-root.Mui-focused:not(.Mui-error) {
   color: skyblue;
 }
 
-.ContactUSForm .MuiOutlinedInput-root.Mui-focused:not(.Mui-error) fieldset {
+.ContactUsForm .MuiOutlinedInput-root.Mui-focused:not(.Mui-error) fieldset {
   border-color: skyblue;
 }
 
-.ContactUSForm .MuiInput-underline:not(.Mui-error):after {
+.ContactUsForm .MuiInput-underline:not(.Mui-error):after {
   border-bottom-color: skyblue !important;
 }
