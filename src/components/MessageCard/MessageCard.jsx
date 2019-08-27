@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import "./MessageCard.css";
 
 const MessageCard = props => {
-  const { office, firstName, lastName, email, phone, message } = props;
-  const fullName = firstName + " " + lastName;
-  const hasFullName = fullName && fullName.trim();
+  const { office, firstName, lastName, email, phone, message } = props;  
+  const fullName = (firstName ? firstName : " ") + (lastName ? lastName : "");
+  const hasFullName = Boolean(fullName && fullName.trim());
 
   return (
     <div className="MessageCard card">
@@ -16,9 +16,9 @@ const MessageCard = props => {
             <h6 className="card-subtitle mb-2 text-muted">{email}</h6>
           </>
         )}
+        {!hasFullName && <h5 className="card-title">{email}</h5>}
         {office && <div>{"Office: " + office}</div>}
         {phone && <div>{"Phone: " + phone}</div>}
-        {!hasFullName && <h5 className="card-title">{email}</h5>}
         <p className="card-text">{"Message: " + message}</p>
       </div>
     </div>
