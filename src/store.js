@@ -1,15 +1,34 @@
 import { applyMiddleware, createStore, compose } from "redux";
-import logger from "redux-logger";
 import thunk from "redux-thunk";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
 import rootReducer from "./reducers";
 
-const isDevEnv = process.env.NODE_ENV === `development`;
+const persistConfig = {
+  key: "root",
+  storage
+};
 
-export default createStore(
-  rootReducer,
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+const isProdEnv = process.env.NODE_ENV === "production";
+
+let middleware = [thunk];
+if (!isProdEnv) {
+  const logger = require("redux-logger").default;
+  middleware = [...middleware, logger];
+}
+
+const composeEnhancers = isProdEnv
+  ? compose
+  : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
+  persistedReducer,
   {},
-  compose(
-    applyMiddleware(thunk, isDevEnv && logger),
-    //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  )
+  composeEnhancers(applyMiddleware(...middleware))
 );
+
+export default store;
+
+export const persistor = persistStore(store);
