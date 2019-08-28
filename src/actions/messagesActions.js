@@ -43,7 +43,7 @@ export function saveMessage(message) {
         dispatch(saveMessageSuccess(res.data));
       })
       .catch(err => {
-        dispatch(saveMessageFailure(err.response.data));
+        dispatch(saveMessageFailure(err && err.response && err.response.data));
       });
   };
 }
@@ -58,7 +58,7 @@ export function getMessages() {
         dispatch(getMessagesSuccess(res.data));
       })
       .catch(err => {
-        dispatch(getMessagesFailure(err.response.data));
+        dispatch(getMessagesFailure(err && err.response && err.response.data));
       });
   };
 }
