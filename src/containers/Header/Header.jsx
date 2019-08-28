@@ -1,18 +1,16 @@
 import React, { useRef } from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Nav, Navbar } from "react-bootstrap";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { getMessages } from "../../actions/messagesActions";
-import "./Header.css";
 import { useOutsideClickListner } from "../../helpers";
-import { LinearProgress } from "@material-ui/core";
-import { PENDING } from "../../constants";
+import "./Header.css";
 
 const Header = (props) => {
-  const { status, getMessages } = props;
+  const { getMessages } = props;
   const [navExpanded, setNavExpanded] = React.useState(false);
   const navbarRef = useRef(null);
-  const hasPendingStatus = status.getMessages === PENDING;
+
 
   useOutsideClickListner({ ref: navbarRef, callback: () => closeNavbar() });
 
@@ -33,7 +31,6 @@ const Header = (props) => {
 
   return (
     <header className="Header" ref={navbarRef}>
-      {hasPendingStatus && <LinearProgress className="LinearProgress" />}
       <Navbar
         fixed="top"
         expand="md"
@@ -63,10 +60,6 @@ const Header = (props) => {
   );
 };
 
-const mapStateToProps = state => ({
-  status: state.status
-});
-
 const mapDispatchToProps = dispatch => ({
   getMessages() {
     dispatch(getMessages());
@@ -74,6 +67,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Header);

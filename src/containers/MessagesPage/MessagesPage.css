@@ -16,9 +16,20 @@
   }
 }
 
-
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .MessagesPage .MessageCard {
     margin: 16px 0;
   }
+}
+
+.MessagesPage .LinearProgress {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+.MessagesPage .LinearProgress > div {
+  background-color: skyblue;
 }

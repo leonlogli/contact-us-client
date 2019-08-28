@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import "./MessageCard.css";
 
 const MessageCard = props => {
-  const { office, firstName, lastName, email, phone, message } = props;  
-  const fullName = (firstName ? firstName : " ") + (lastName ? lastName : "");
+  const { office, firstName, lastName, email, phone, message } = props;
+  const fullName =
+    (firstName ? firstName : "") + (lastName ? " " + lastName : "");
   const hasFullName = Boolean(fullName && fullName.trim());
 
   return (
