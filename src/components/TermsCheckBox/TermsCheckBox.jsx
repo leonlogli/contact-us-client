@@ -8,7 +8,7 @@ const TermsCheckBox = ({ onChange}) => {
 
   const handleChange = event => {
     setChecked(event.target.checked);
-    onChange(event);
+    onChange(event.target.checked);
   }
 
   return (
@@ -18,6 +18,7 @@ const TermsCheckBox = ({ onChange}) => {
             <Checkbox
               value="termChecked"
               checked={checked}
+              color="primary"
               onChange={handleChange}
             />
           }

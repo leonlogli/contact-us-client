@@ -148,7 +148,7 @@ const ContactUsForm = props => {
         error={errors.message.length > 0}
         helperText={errors.message}
       />
-      <TermsCheckBox onChange={e => setChecked(e.target.checked)} />
+      <TermsCheckBox onChange={value => setChecked(value)} />
       {policyErrorVisible && !checked && (
         <div className="alert alert-danger" role="alert">
           You must agree and consent to the Term &amp; Condition and the Privacy

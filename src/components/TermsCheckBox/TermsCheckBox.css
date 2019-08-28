@@ -1,5 +1,5 @@
-.TermsCheckBox * {
-  font-size: 9.5px;
+.TermsCheckBox .MuiFormControlLabel-label {
+  font-size: 12px;
 }
 
 .TermsCheckBox .MuiCheckbox-root.Mui-checked {

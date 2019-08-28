@@ -13,7 +13,7 @@
     width: 100%;
   }
 
-  .ContactUsForm > div:not(:first-child)  {
+  .ContactUsForm > div:not(:first-child) {
     flex-direction: column;
   }
 }
@@ -36,7 +36,7 @@
 }
 
 .ContactUsForm .submit-button {
-  background: #FAE912;
+  background: #fae912;
   color: #323262 !important;
   font-weight: 500;
   border-radius: 80%;
@@ -67,4 +67,8 @@
 
 .ContactUsForm .MuiInput-underline:not(.Mui-error):after {
   border-bottom-color: skyblue !important;
+}
+
+.ContactUsForm .alert-danger {
+  font-size: 14px;
 }
